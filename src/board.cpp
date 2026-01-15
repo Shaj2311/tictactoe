@@ -56,10 +56,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
       newwin(line, col, line * 2 + height_adjusting_factor, centering_factor);
 
   if (gamestate[0] == 0) {
-    mvwaddstr(box1, 1, 0, tokenize(tokenX).c_str());
+    printColored(box1, 1, tokenX);
   }
   if (gamestate[0] == 1) {
-    mvwaddstr(box1, 1, 0, tokenize(tokenO).c_str());
+    printColored(box1, 2, tokenO);
   }
   box(box1, 0, 0);
   mvwaddch(box1, line - 1, col - 2, '1');
@@ -69,10 +69,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
                         col + centering_factor);
 
   if (gamestate[1] == 0) {
-    mvwaddstr(box2, 1, 0, tokenize(tokenX).c_str());
+    printColored(box2, 1, tokenX);
   }
   if (gamestate[1] == 1) {
-    mvwaddstr(box2, 1, 0, tokenize(tokenO).c_str());
+    printColored(box2, 2, tokenO);
   }
   box(box2, 0, 0);
   mvwaddch(box2, line - 1, col - 2, '2');
@@ -82,10 +82,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
                         col * 2 + centering_factor);
 
   if (gamestate[2] == 0) {
-    mvwaddstr(box3, 1, 0, tokenize(tokenX).c_str());
+    printColored(box3, 1, tokenX);
   }
   if (gamestate[2] == 1) {
-    mvwaddstr(box3, 1, 0, tokenize(tokenO).c_str());
+    printColored(box3, 2, tokenO);
   }
   box(box3, 0, 0);
   mvwaddch(box3, line - 1, col - 2, '3');
@@ -95,10 +95,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
       newwin(line, col, line + height_adjusting_factor, centering_factor);
 
   if (gamestate[3] == 0) {
-    mvwaddstr(box4, 1, 0, tokenize(tokenX).c_str());
+    printColored(box4, 1, tokenX);
   }
   if (gamestate[3] == 1) {
-    mvwaddstr(box4, 1, 0, tokenize(tokenO).c_str());
+    printColored(box4, 2, tokenO);
   }
   box(box4, 0, 0);
   mvwaddch(box4, line - 1, col - 2, '4');
@@ -108,10 +108,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
       newwin(line, col, line + height_adjusting_factor, col + centering_factor);
 
   if (gamestate[4] == 0) {
-    mvwaddstr(box5, 1, 0, tokenize(tokenX).c_str());
+    printColored(box5, 1, tokenX);
   }
   if (gamestate[4] == 1) {
-    mvwaddstr(box5, 1, 0, tokenize(tokenO).c_str());
+    printColored(box5, 2, tokenO);
   }
   box(box5, 0, 0);
   mvwaddch(box5, line - 1, col - 2, '5');
@@ -121,10 +121,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
                         col * 2 + centering_factor);
 
   if (gamestate[5] == 0) {
-    mvwaddstr(box6, 1, 0, tokenize(tokenX).c_str());
+    printColored(box6, 1, tokenX);
   }
   if (gamestate[5] == 1) {
-    mvwaddstr(box6, 1, 0, tokenize(tokenO).c_str());
+    printColored(box6, 2, tokenO);
   }
   box(box6, 0, 0);
   mvwaddch(box6, line - 1, col - 2, '6');
@@ -133,10 +133,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
   WINDOW *box7 = newwin(line, col, height_adjusting_factor, centering_factor);
 
   if (gamestate[6] == 0) {
-    mvwaddstr(box7, 1, 0, tokenize(tokenX).c_str());
+    printColored(box7, 1, tokenX);
   }
   if (gamestate[6] == 1) {
-    mvwaddstr(box7, 1, 0, tokenize(tokenO).c_str());
+    printColored(box7, 2, tokenO);
   }
   box(box7, 0, 0);
   mvwaddch(box7, line - 1, col - 2, '7');
@@ -146,10 +146,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
       newwin(line, col, height_adjusting_factor, col + centering_factor);
 
   if (gamestate[7] == 0) {
-    mvwaddstr(box8, 1, 0, tokenize(tokenX).c_str());
+    printColored(box8, 1, tokenX);
   }
   if (gamestate[7] == 1) {
-    mvwaddstr(box8, 1, 0, tokenize(tokenO).c_str());
+    printColored(box8, 2, tokenO);
   }
   box(box8, 0, 0);
   mvwaddch(box8, line - 1, col - 2, '8');
@@ -159,10 +159,10 @@ void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
       newwin(line, col, height_adjusting_factor, col * 2 + centering_factor);
 
   if (gamestate[8] == 0) {
-    mvwaddstr(box9, 1, 0, tokenize(tokenX).c_str());
+    printColored(box9, 1, tokenX);
   }
   if (gamestate[8] == 1) {
-    mvwaddstr(box9, 1, 0, tokenize(tokenO).c_str());
+    printColored(box9, 2, tokenO);
   }
 
   box(box9, 0, 0);
