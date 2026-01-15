@@ -57,8 +57,12 @@ void Game::play() {
 
   if (myToken == 0) {
     mvwprintw(infowin, 0, 0, "I go first!");
+    init_pair(1, COLOR_RED, -1);
+    init_pair(2, COLOR_GREEN, -1);
   } else {
     mvwprintw(infowin, 0, 0, "You go first!");
+    init_pair(1, COLOR_GREEN, -1);
+    init_pair(2, COLOR_RED, -1);
   }
   wrefresh(infowin);
 
