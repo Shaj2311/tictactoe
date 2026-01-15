@@ -39,6 +39,12 @@ string tokenize(const std::vector<int> &arr) {
   return out;
 }
 
+void printColored(WINDOW* box, int colorPairVal, vector<int>& token) {
+  wattron(box, COLOR_PAIR(colorPairVal));
+  mvwaddstr(box, 1, 0, tokenize(token).c_str());
+  wattroff(box, COLOR_PAIR(colorPairVal));
+}
+
 void Board::drawBoard(std::vector<int> gamestate, Board *gameBoard, WINDOW *win,
                       int leny, int lenx) {
 
